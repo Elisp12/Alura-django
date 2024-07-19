@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    {% for lista in lista_peca %}
+        <ul class="lista">
+            <li class="lista_item">{{ lista.nome }}</li>
+            <li class="lista_item">{{ lista.descricao }}</li>
+            <li class="lista_item">{{ lista.relacao }}</li>
+            <li class="lista_item">{{ lista.modalidade }}</li>
+        </ul>
+    
+    {% endfor %}
+
+
+{% endblock %}
