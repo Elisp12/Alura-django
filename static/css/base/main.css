@@ -1,20 +1,61 @@
-.container_card {
-    display: flex;
+.banner {
+    background-color: darkkhaki;
+    margin: auto;
     padding: 1em;
-    
+    color: var(--dark-am);
+    text-align: center;
+}
+
+.titulo_banner {
+    padding-bottom: 1em;
+}
+
+.banner_texto {
+    padding-bottom: 1em;
+}
+
+.texto {
+    padding-bottom: 1em;
+}
+
+.container_card {
+    margin: auto;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .card {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 1em;
-    padding: 1em;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 10px;
 }
+
 .img_card {
-    width: 200px;
+    width: 150px;
+    height: 150px;
+    margin-right: 0.5em;
+    background-color: darkolivegreen;
 }
 
+.lista {
+    display: block;
+    width: 150px;
+}
 
+.lista_nome {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.lista_modalidade {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.item_lista {
+    margin: 0.5em;
+}

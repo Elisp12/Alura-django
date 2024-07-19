@@ -25,7 +25,8 @@
 }
 
 .lista_item {
-    width: 30vh;
+    width: 20vh;
+    padding: 0.5em;
 }
 
 .item_link {
@@ -34,6 +35,7 @@
     text-decoration: none;
     text-transform: uppercase;
     padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .container_botao:checked ~ .lista_menu {

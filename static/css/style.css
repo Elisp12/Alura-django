@@ -4,11 +4,13 @@
 
 :root {
     --preto: black;
-    --cinza-claro: rgb(199, 196, 196);
+    --cinza-claro: rgb(226, 225, 225);
+    --dark-am: rgb(117, 114, 73);
 }
 
 body {
     width: 100%;
     padding: auto;
     margin: auto;
+    background-color: var(--cinza-claro);
 }
