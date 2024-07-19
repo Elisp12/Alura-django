@@ -1,14 +1,14 @@
 @import url(reset.css);
+@import url(base/cabecalho.css);
+@import url(base/main.css);
 
-header {
-    background-color: blue;
-    color: aliceblue;
+:root {
+    --preto: black;
+    --cinza-claro: rgb(199, 196, 196);
 }
 
 body {
-    background-color: red;
-}
-
-footer {
-    background-color: yellow;
+    width: 100%;
+    padding: auto;
+    margin: auto;
 }

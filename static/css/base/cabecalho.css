@@ -1,0 +1,51 @@
+.cabecalho {
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.5em 1em;
+}
+
+.container_botao {
+    display: none;
+}
+
+.titulo_menu {
+    color: orangered;
+    font-weight: 700;
+    padding: 0.5em 0;
+
+}
+
+.lista_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+.lista_item {
+    width: 30vh;
+}
+
+.item_link {
+    font-size: 10px;
+    color: darkblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+.container_botao:checked ~ .lista_menu {
+    display:block;
+    background-color: white;
+}
+
+.titulo_header {
+    text-decoration: none;
+    font-weight: 900;
+    color: azure;
+}
+.user_link {
+    color:aquamarine;
+}

@@ -1,16 +1,47 @@
 {% extends 'index.html' %}
 
 {% block content %}
+    <div class="container_card">
+        
+        <div class="card">
+            <h2 class="img_card">imagem</h2>
+            <ul class="lista">
+                <li class="item_lista">nome</li>
+                <li class="item_lista">descricao</li>
+                <li class="item_lista">relacao</li>
+                <li class="item_lista">modalidade</li>
+            </ul>
+        </div>
 
-    {% for lista in lista_peca %}
-        <ul class="lista">
-            <li class="lista_item">{{ lista.nome }}</li>
-            <li class="lista_item">{{ lista.descricao }}</li>
-            <li class="lista_item">{{ lista.relacao }}</li>
-            <li class="lista_item">{{ lista.modalidade }}</li>
-        </ul>
-    
-    {% endfor %}
+        <div class="card">
+            <h2 class="img_card">imagem</h2>
+            <ul class="lista">
+                <li class="item_lista">nome</li>
+                <li class="item_lista">descricao</li>
+                <li class="item_lista">relacao</li>
+                <li class="item_lista">modalidade</li>
+            </ul>
+        </div>
 
+        <div class="card">
+            <h2 class="img_card">imagem</h2>
+            <ul class="lista">
+                <li class="item_lista">nome</li>
+                <li class="item_lista">descricao</li>
+                <li class="item_lista">relacao</li>
+                <li class="item_lista">modalidade</li>
+            </ul>
+        </div>
 
+        <div class="card">
+            <h2 class="img_card">imagem</h2>
+            <ul class="lista">
+                <li class="item_lista">nome</li>
+                <li class="item_lista">descricao</li>
+                <li class="item_lista">relacao</li>
+                <li class="item_lista">modalidade</li>
+            </ul>
+        </div>
+
+    </div>
 {% endblock %}
