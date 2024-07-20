@@ -1,6 +1,8 @@
 @import url(reset.css);
 @import url(base/cabecalho.css);
+@import url(base/banner.css);
 @import url(base/main.css);
+@import url(base/informacao_item.css);
 
 :root {
     --preto: black;

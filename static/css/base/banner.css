@@ -1,0 +1,19 @@
+.banner {
+    background-color: darkkhaki;
+    margin: auto;
+    padding: 1em;
+    color: var(--dark-am);
+    text-align: center;
+}
+
+.titulo_banner {
+    padding-bottom: 1em;
+}
+
+.banner_texto {
+    padding-bottom: 1em;
+}
+
+.texto {
+    padding-bottom: 1em;
+}

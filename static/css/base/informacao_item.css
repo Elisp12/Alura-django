@@ -1,0 +1,46 @@
+.infor_container-card {
+    height: 90vh;
+    background-color: var(--cinza-claro);
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.infor_img-card {
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    background-color: chocolate;
+}
+
+.infor_lista-item {
+    padding: 1em;
+    text-align: left;
+}
+
+.infor_nome {
+    margin-top: 1em;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.infor_descricao {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.infor_relacao {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 3em 0;
+}
+
+.infor_modalidade {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+

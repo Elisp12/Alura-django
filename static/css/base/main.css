@@ -1,25 +1,10 @@
-.banner {
-    background-color: darkkhaki;
-    margin: auto;
-    padding: 1em;
-    color: var(--dark-am);
-    text-align: center;
-}
-
-.titulo_banner {
-    padding-bottom: 1em;
-}
-
-.banner_texto {
-    padding-bottom: 1em;
-}
-
-.texto {
-    padding-bottom: 1em;
+.container__cards {
+    padding: 10px;
+    height: 90vh;
 }
 
 .container_card {
-    margin: auto;
+    margin: 15px auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -28,14 +13,14 @@
 .card {
     display: flex;
     justify-content: center;
-    margin: 0.5em;
-    padding: 0.5em;
     background-color: white;
+    margin: 1em 0;
+    padding: 0.3em;
     border-radius: 10px;
 }
 
 .img_card {
-    width: 150px;
+    width: 180px;
     height: 150px;
     margin-right: 0.5em;
     background-color: darkolivegreen;
@@ -43,7 +28,8 @@
 
 .lista {
     display: block;
-    width: 150px;
+    width: 120px;
+    text-align: end;
 }
 
 .lista_nome {

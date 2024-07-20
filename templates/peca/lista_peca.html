@@ -1,28 +1,28 @@
 {% extends 'index.html' %}
 
 {% block content %}
+    <div class="container__cards">
+        <section class="banner">
+            <h2 class="titulo_banner">
+                Catálogo de Bikes
+            </h2>
+            <p class="banner_texto">
+                Aqui você fica atualizado! 
+            </p>
+            <p class="texto"> Descubra tudo sobre a bike dos seus sonhos</p>
 
-    <section class="banner">
-        <h2 class="titulo_banner">
-            Catálogo de Bikes
-        </h2>
-        <p class="banner_texto">
-            Aqui você fica atualizado! 
-        </p>
-        <p class="texto"> Descubra tudo sobre a bike dos seus sonhos</p>
-
-    </section>
-    <div class="container_card">
-        {% for lista in lista_peca %}
-            <div class="card">
-                <h2 class="img_card">imagem</h2>
-                <ul class="lista">
-                    <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome">{{ lista.nome }}</a></li>
-                    <li class="item_lista">{{ lista.descricao }}</li>
-                    <li class="item_lista"><p class="lista_descricao">{{ lista.relacao }}</p></li>
-                    <li class="item_lista"><a href="#" class="lista_modalidade">{{ lista.modalidade }}</a></li>
-                </ul>
-            </div>
-        {% endfor %}
+        </section>
+        <div class="container_card">
+            {% for lista in lista_peca %}
+                <div class="card">
+                    <h2 class="img_card">imagem</h2>
+                    <ul class="lista">
+                        <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome">{{ lista.nome }}</a></li>
+                        <li class="item_lista"><p class="lista_descricao">{{ lista.relacao }}</p></li>
+                        <li class="item_lista"><a href="#" class="lista_modalidade">{{ lista.modalidade }}</a></li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

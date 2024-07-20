@@ -1,1 +1,17 @@
-<h1>{{ informacao_item}}</h1>
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="infor_container-card">
+        {% for infor in informacao_item %}
+            <div class="infor_card">
+                <h2 class="infor_img-card">imagem</h2>
+                <ul class="infor_lista">
+                    <li class="infor_lista-item"><h2 class="infor_nome">{{ infor.nome }}</h2></li>
+                    <li class="infor_lista-item"><p class="infor_descricao">{{ infor.descricao }}</p></li>
+                    <li class="infor_lista-item"><p class="infor_relacao">{{ infor.relacao }}</p></li>
+                    <li class="infor_lista-item"><a href="#" class="infor_modalidade">{{ infor.modalidade }}</a></li>
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
