@@ -121,9 +121,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#arquivos státicos
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR / 'static')
 ]
+
+# Media
+MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
+
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

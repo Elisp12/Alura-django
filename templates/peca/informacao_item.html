@@ -4,7 +4,7 @@
     <div class="infor_container-card">
         {% for infor in informacao_item %}
             <div class="infor_card">
-                <h2 class="infor_img-card">imagem</h2>
+                <h2 class="infor_img-card"><img src="{{ infor.imagem.url }}" alt=""></h2>
                 <ul class="infor_lista">
                     <li class="infor_lista-item"><h2 class="infor_nome">{{ infor.nome }}</h2></li>
                     <li class="infor_lista-item"><p class="infor_descricao">{{ infor.descricao }}</p></li>
