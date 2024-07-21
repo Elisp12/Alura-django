@@ -17,3 +17,31 @@
 .texto {
     padding-bottom: 1em;
 }
+
+.container_buscar {
+    width: 60%;
+    margin: auto;
+}
+
+.input_buscar {
+    width: 100%;
+    padding: 0.3em;
+    
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--cinza-claro);
+    background-color: var(--dark-am);
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.input_buscar::placeholder {
+    background-image: url(/static/css/base/media/Lupa.svg);
+    background-repeat: no-repeat;
+    padding-left: 1em;
+    background-color: var(--dark-am);
+    color: var(--cinza-claro);
+    background-position: 0.2em;
+}

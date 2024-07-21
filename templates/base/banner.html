@@ -1,0 +1,15 @@
+<section class="banner">
+    <h2 class="titulo_banner">
+        Catálogo de Bikes
+    </h2>
+    <p class="banner_texto">
+        Aqui você fica atualizado! 
+    </p>
+    <p class="texto"> Descubra tudo sobre a bike dos seus sonhos</p>
+    <section class="container_buscar">
+        <form action="{% url 'buscar_item' %}" method="post" class="formulario_buscar" >
+            {% csrf_token %}
+            <input type="search" name="buscar" id="buscar" placeholder="o que deseja buscar" class="input_buscar">
+        </form>
+    </section>
+</section>
