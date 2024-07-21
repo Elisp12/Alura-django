@@ -23,9 +23,9 @@
     width: 180px;
     height: 150px;
     margin-right: 0.5em;
-    background-image: url(/static/css/base/media/unnamed.jpg);
+    /* background-image: url(/static/css/base/media/unnamed.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
 }
 
 .lista {
