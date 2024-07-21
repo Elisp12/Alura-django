@@ -18,7 +18,7 @@
                     <div class="card">
                         
                         {% if lista.imagem == "" or lista.imagem == null %} <!-- se o usuário não adicionar nenhuma img -->
-                            <a href=" informacao/{{ lista.index }}" class="link_img-card">
+                            <a href=" informacao/{{ lista.index }}" class="link_img-card link_card">
                                 <img class="sem_imagem" src="/static/css/base/media/unnamed.jpg" alt=""> <!-- mostra essa  -->
                             </a>
                         {% else %} <!-- caso o usuário adicionar img (mostra imagem do item)-->
@@ -28,9 +28,9 @@
                         {% endif %}
 
                         <ul class="lista">
-                            <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome">{{ lista.nome }}</a></li>
+                            <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome link_card">{{ lista.nome }}</a></li>
                             <li class="item_lista"><p class="lista_descricao">{{ lista.relacao }}</p></li>
-                            <li class="item_lista"><a href="#" class="lista_modalidade">{{ lista.modalidade }}</a></li>
+                            <li class="item_lista"><a href="#" class="lista_modalidade link_card">{{ lista.modalidade }}</a></li>
                         </ul>
                     </div>
                 {% endfor %}
