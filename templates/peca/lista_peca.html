@@ -15,8 +15,9 @@
         <div class="container_card">
             {% for lista in lista_peca %}
                 <div class="card">
-                    <a href="#" class="img_card">
-                        <img class="imagem" src="{{ lista.imagem.url }}" alt="">
+
+                    <a href=" informacao/{{ lista.index }}" class="link_img-card">
+                        <img class="img_card" src="{{ lista.imagem.url }}" alt="">
                     </a>
                     <ul class="lista">
                         <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome">{{ lista.nome }}</a></li>
