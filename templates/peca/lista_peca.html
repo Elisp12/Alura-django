@@ -2,16 +2,7 @@
 
 {% block content %}
     <div class="container__cards">
-        <section class="banner">
-            <h2 class="titulo_banner">
-                Catálogo de Bikes
-            </h2>
-            <p class="banner_texto">
-                Aqui você fica atualizado! 
-            </p>
-            <p class="texto"> Descubra tudo sobre a bike dos seus sonhos</p>
 
-        </section>
         <div class="container_card">
             {% if lista_peca %} <!-- condicao para cards, caso não tenha cards -->
                 {% for lista in lista_peca %}

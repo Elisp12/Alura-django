@@ -10,9 +10,7 @@
                         <img src="/static/css/base/media/unnamed.jpg" alt="sem imagem" class="infor_sem-imagem"> <!-- mostra essa -->
                     </div>
                 {% else %} <!-- caso o usuário adicionar img (mostra imagem do item)-->
-                    <a href=" informacao/{{ infor.index }}" class="link_img-card">
-                        <img class="infor_img-card" src="{{ infor.imagem.url }}" alt="">
-                    </a>
+                    <img class="infor_img-card" src="{{ infor.imagem.url }}" alt="">
                 {% endif %}
                 
                 <ul class="infor_lista">
