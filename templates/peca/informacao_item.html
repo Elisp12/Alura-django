@@ -4,7 +4,17 @@
     <div class="infor_container-card">
         {% for infor in informacao_item %}
             <div class="infor_card">
-                <h2><img class="infor_img-card" src="{{ infor.imagem.url }}" alt=""></h2>
+
+                {% if infor.imagem == "" or infor.imagem == null %} <!-- se o usuário não adicionar nenhuma img -->
+                    <div class="infor_container-sem-img">
+                        <img src="/static/css/base/media/unnamed.jpg" alt="sem imagem" class="infor_sem-imagem"> <!-- mostra essa -->
+                    </div>
+                {% else %} <!-- caso o usuário adicionar img (mostra imagem do item)-->
+                    <a href=" informacao/{{ infor.index }}" class="link_img-card">
+                        <img class="infor_img-card" src="{{ infor.imagem.url }}" alt="">
+                    </a>
+                {% endif %}
+                
                 <ul class="infor_lista">
                     <li class="infor_lista-item"><h2 class="infor_nome">{{ infor.nome }}</h2></li>
                     <li class="infor_lista-item"><p class="infor_descricao">{{ infor.descricao }}</p></li>

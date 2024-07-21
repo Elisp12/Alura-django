@@ -18,7 +18,9 @@
                     <div class="card">
                         
                         {% if lista.imagem == "" or lista.imagem == null %} <!-- se o usuário não adicionar nenhuma img -->
-                            <span class="sem_imagem"></span> <!-- mostra essa (caminnho da img no css) -->
+                            <a href=" informacao/{{ lista.index }}" class="link_img-card">
+                                <img class="sem_imagem" src="/static/css/base/media/unnamed.jpg" alt=""> <!-- mostra essa  -->
+                            </a>
                         {% else %} <!-- caso o usuário adicionar img (mostra imagem do item)-->
                             <a href=" informacao/{{ lista.index }}" class="link_img-card">
                                 <img class="img_card" src="{{ lista.imagem.url }}" alt="">
