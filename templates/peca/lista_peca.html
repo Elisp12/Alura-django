@@ -16,9 +16,15 @@
             {% if lista_peca %} <!-- condicao para cards, caso não tenha cards -->
                 {% for lista in lista_peca %}
                     <div class="card">
-                        <a href=" informacao/{{ lista.index }}" class="link_img-card">
-                            <img class="img_card" src="{{ lista.imagem.url }}" alt="">
-                        </a>
+                        
+                        {% if lista.imagem == "" or lista.imagem == null %} <!-- se o usuário não adicionar nenhuma img -->
+                            <span class="sem_imagem"></span> <!-- mostra essa (caminnho da img no css) -->
+                        {% else %} <!-- caso o usuário adicionar img (mostra imagem do item)-->
+                            <a href=" informacao/{{ lista.index }}" class="link_img-card">
+                                <img class="img_card" src="{{ lista.imagem.url }}" alt="">
+                            </a>
+                        {% endif %}
+
                         <ul class="lista">
                             <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome">{{ lista.nome }}</a></li>
                             <li class="item_lista"><p class="lista_descricao">{{ lista.relacao }}</p></li>

@@ -19,6 +19,17 @@
     border-radius: 10px;
 }
 
+.sem_imagem { /* caminho da img */
+    width: 180px;
+    height: 150px;
+    margin-right: 0.5em;
+
+    background-image: url(/static/css/base/media/unnamed.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 .img_card {
     width: 180px;
     height: 150px;
