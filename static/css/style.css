@@ -3,11 +3,14 @@
 @import url(base/banner.css);
 @import url(base/main.css);
 @import url(base/informacao_item.css);
+@import url(base/login.css);
+@import url(base/cadastro.css);
 
 :root {
     --preto: black;
     --cinza-claro: rgb(226, 225, 225);
     --dark-am: rgb(117, 114, 73);
+    --verde-transpatente: rgba(206, 235, 76, 0.281);
 }
 
 body {

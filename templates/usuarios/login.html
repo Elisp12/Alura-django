@@ -1,1 +1,22 @@
-<h1>Login</h1>
+{% extends 'index.html' %}
+
+{% block content %}
+    <section class="login">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="form_login col-lg-12">
+                    <label for="nome_login"><b>Nome de Login</b></label>
+                    <input type="text" class="form-control" name="nome_login" placeholder="Ex.: João Silva" required>
+                </div>
+                <div class="form_login col-lg-12">
+                    <label for="password"><b>Senha</b></label>
+                    <input type="password" class="form-control" name="password" placeholder="Digite sua senha" required>
+                </div>
+                <div class="form_login text-center">
+                    <button class="btn btn-success col-12" type="submit">Login</button>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock %}
