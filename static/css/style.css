@@ -3,9 +3,7 @@
 @import url(base/banner.css);
 @import url(base/main.css);
 @import url(base/informacao_item.css);
-@import url(base/login.css);
-@import url(base/cadastro.css);
-
+@import url(base/usuario/formulario_usuario.css);
 :root {
     --preto: black;
     --cinza-claro: rgb(226, 225, 225);

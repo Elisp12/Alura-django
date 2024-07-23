@@ -1,0 +1,47 @@
+.login-cadastrar{
+    padding-top: 30px;
+    margin: auto;
+    width: 90%;
+    height: 80vh;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label_form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+}
+
+.form-control {
+    width: 38vh;
+    padding: 1em 0.5em;
+    border-radius: 12px;
+}
+
+.form-control:focus {
+    background-color: var(--verde-transpatente);
+}
+
+.botao {
+    padding: 0.5em;
+    margin: 2em;
+}
+
+.botao:hover {
+    font-weight: 600;
+    color: green;
+    transition: 0.3s;
+}
+
+.titulo_cadastrar-login {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+    color: orangered;
+}

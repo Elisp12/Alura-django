@@ -1,29 +1,19 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<h2 class="titulo_cadastrar">Cadastro</h2>
-    <section class="form_cadastrar">
+<h2 class="titulo_cadastrar-login">Cadastro</h2>
+    <section class="login-cadastrar">
         <form action="" method="post">
             {% csrf_token %}
-            <div class="row">
-                <div class="form_campo col-lg-12">
-                    <label for="nome_cadastro"><b>Nome completo</b></label>
-                    <input type="text" class="form-control" name="nome_cadastro" placeholder="Ex.: João Silva" required>
-                </div>
-                <div class="form_campo col-lg-12">
-                    <label for="email"><b>Email</b></label>
-                    <input type="email" class="form-control" name="email" placeholder="Ex.: joaosilva@xpto.com" required>
-                </div>
-                <div class="form_campo col-lg-6">
-                    <label for="password1" ><b>Senha</b></label>
-                    <input type="password" class="form-control" name="password1" placeholder="Digite sua senha" required>
-                </div>
-                <div class="form_campo col-lg-6">
-                    <label for="password2"><b>Confirmação de senha</b></label>
-                    <input type="password" class="form-control" name="password2" placeholder="Digite sua senha mais uma vez" required>
-                </div>
-                <div class="form_campo text_center-cadastrar">
-                    <button class="btn btn-success col-12"type="submit">Criar sua conta</button>
+            <div class="formulario">
+                {% for field in form.visible_fields%}
+                    <div>
+                        <label class="label_form" for="{{ fild.id_for_label }}" >{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <div>
+                    <button class="botao" type="submit">Cadastrar</button>
                 </div>
             </div>
         </form>
