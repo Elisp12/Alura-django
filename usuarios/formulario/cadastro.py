@@ -1,7 +1,7 @@
 from django import forms
 
 class Cadastro_formulario(forms.Form):
-    nome_login = forms.CharField(
+    nome_cadastro = forms.CharField(
         label='Nome de Cadastro',
         required=True,
         max_length=100,
