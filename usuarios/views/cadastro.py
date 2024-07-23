@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 
 from usuarios.formulario.cadastro import Cadastro_formulario
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 def cadastro(request):
     form = Cadastro_formulario()
@@ -11,6 +12,9 @@ def cadastro(request):
 
         if form.is_valid():
             if form['senha1'].value() != form['senha2'].value(): #condição para senhas de diferentes
+                
+                messages.error(request, 'Senhas não são iguais!')
+                
                 return redirect('cadastro') #retorna a página de cadastro
 
             nome = form['nome_cadastro'].value() # valores passados por usuários
@@ -18,6 +22,9 @@ def cadastro(request):
             senha = form['senha1'].value()
 
             if User.objects.filter(username = nome).exists(): # se usuário já exite
+                
+                messages.error(request, 'Usuário jé existente')
+                
                 return redirect('cadastro')
             
             usuario = User.objects.create_user( # cria novo usuário no banco de dados
@@ -26,6 +33,8 @@ def cadastro(request):
                 password = senha
             )
             usuario.save() 
+
+            messages.success(request, 'Cadastro efetuado com sucesso!')
 
             return redirect('login') # redireciona para página de login
     
