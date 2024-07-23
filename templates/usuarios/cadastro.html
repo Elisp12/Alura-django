@@ -3,7 +3,7 @@
 {% block content %}
 <h2 class="titulo_cadastrar-login">Cadastro</h2>
     <section class="login-cadastrar">
-        <form action="" method="post">
+        <form action="{% url 'cadastro' %}" method="post">
             {% csrf_token %}
             <div class="formulario">
                 {% for field in form.visible_fields%}
