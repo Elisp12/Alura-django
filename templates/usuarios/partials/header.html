@@ -1,0 +1,42 @@
+
+<header class="user-cabecalho">
+    <!-- MENU NOVO-->
+    <div class="user-container">
+        <input type="checkbox" name="menu" id="menu" class="user-container_botao">
+        <label for="menu" class="user-menu_container">
+            <span class="user-icone_menu"><i class="fa-solid fa-bars"></i></span>
+        </label>
+        <ul class="user-lista_menu">
+            <li class="user-titulo_menu">Criar</li>
+            <li class="user-lista_item"> 
+                <a href="#" class="user-item_link">nova categoria</a> 
+            </li>
+            <li class="user-lista_item">
+                <a href="{% url 'cadastrar_item' %}" class="user-item_link">novo Item</a>
+            </li>
+            <li class="user-lista_item">
+                <a href="#" class="user-item_link">Categorias</a>
+            </li>
+        </ul>
+    </div>
+    <!-- LOGO HEADER -->
+    <div class="user-container_titulo">
+        <h1 class="titulo"> <a href="{% url 'home_usuario' %}" class="titulo_header">CatBikes</a></h1>
+    </div>
+    <!-- USUÁRIO -->
+    <div class="container_user">
+        <input type="checkbox" name="usuario" id="usuario" class="container_botao">
+        <label for="usuario" class="menu_container">
+            <span class="icone_meu"><i class="fa-solid fa-address-book"></i></span>
+        </label>
+        <ul class="lista_menu-usuario">
+            <li class="titulo_menu">Nome do Usuário</li>
+            <li class="lista_item"> 
+                <a href="#" class="item_link">Perfil</a> 
+            </li>
+            <li class="lista_item">
+                <a href="{% url 'lista_peca' %}" class="item_link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </li>
+        </ul>
+    </div>
+</header>

@@ -1,0 +1,28 @@
+<div class="container__cards">
+    <div class="container_card">
+        {% if lista_peca %} <!-- condicao para cards, caso não tenha cards -->
+            {% for lista in lista_peca %}
+                <div class="card">
+                    
+                    {% if lista.imagem == "" or lista.imagem == null %} <!-- se o usuário não adicionar nenhuma img -->
+                        <a href=" informacao/{{ lista.index }}" class="link_img-card link_card">
+                            <img class="sem_imagem" src="/static/css/base/media/unnamed.jpg" alt=""> <!-- mostra essa  -->
+                        </a>
+                    {% else %} <!-- caso o usuário adicionar img (mostra imagem do item)-->
+                        <a href=" informacao/{{ lista.index }}" class="link_img-card">
+                            <img class="img_card" src="{{ lista.imagem.url }}" alt="">
+                        </a>
+                    {% endif %}
+
+                    <ul class="lista">
+                        <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome link_card">{{ lista.nome }}</a></li>
+                        <li class="item_lista"><p class="lista_descricao">{{ lista.relacao }}</p></li>
+                        <li class="item_lista"><a href="#" class="lista_modalidade link_card">{{ lista.modalidade }}</a></li>
+                    </ul>
+                </div>
+            {% endfor %}
+        {% else %} <!-- não mostra nada -->
+            <h2>Nada postado!</h2>
+        {% endif %}
+    </div>
+</div>

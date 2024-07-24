@@ -2,6 +2,9 @@ from django.shortcuts import render
 
 from apps.catalogo.models import Modadalidade, Peca
 
+from django.contrib.auth.models import User
+
+
 def lista_peca(request):
     peca = Peca.objects.all()
 

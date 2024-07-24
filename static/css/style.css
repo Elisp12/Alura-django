@@ -5,6 +5,7 @@
 @import url(base/informacao_item.css);
 @import url(base/usuario/formulario_usuario.css);
 @import url(base/mensagem.css);
+@import url(base/usuario/cabecalho.css);
 
 :root {
     --preto: black;

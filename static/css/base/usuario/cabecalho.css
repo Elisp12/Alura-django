@@ -1,0 +1,74 @@
+.user-cabecalho {
+    background-color: darkturquoise;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    position: relative;
+    
+    padding: 1em 1em;
+}
+
+.user-container_botao {
+    display: none;
+}
+
+.user-titulo_menu {
+    color: orangered;
+    font-weight: 700;
+    padding: 0.5em 0;
+}
+
+.user-lista_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.user-titulo_menu {
+    text-align: center;
+}
+
+.user-lista_item {
+    width: 15vh;
+    padding: 0.5em;
+}
+
+.user-item_link {
+    font-size: 10px;
+    color: darkblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.user-container_botao:checked ~ .user-lista_menu{
+    display:block;
+    background-color: white;
+}
+
+.user-titulo_header {
+    text-decoration: none;
+    font-weight: 900;
+    color: azure;
+}
+
+.user-user_link {
+    color:aquamarine;
+}
+
+/* Usuario */
+.user-lista_menu-usuario {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.user-container_botao:checked ~ .user-lista_menu-usuario{
+    display:block;
+    background-color: white;
+}
