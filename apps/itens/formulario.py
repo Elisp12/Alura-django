@@ -7,6 +7,11 @@ class Item_formulario(forms.ModelForm):
     class Meta:
         model = Peca
         fields = "__all__"
+        labels = {
+            'descricao': 'Descrição',
+            'relacao': 'Relação',
+            'usuario': 'Usuário',
+        }
 
 
         widgets = {

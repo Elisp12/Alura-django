@@ -24,7 +24,7 @@ def login(request):
             auth.login(request, usuario)
 
             messages.success(request, f'{nome} logado com sucesso!')
-            return redirect('lista_peca')
+            return redirect('home_usuario')
         
         else:
             messages.error(request, 'Erro ao efetuar login!')
