@@ -1,0 +1,10 @@
+.messages {
+    text-align: center;
+    padding: 1em;
+}
+.danger {
+    color: red;
+}
+.success {
+    color: green;
+}
