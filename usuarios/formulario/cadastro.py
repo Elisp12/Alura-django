@@ -48,3 +48,13 @@ class Cadastro_formulario(forms.Form):
             }
         )
     )
+
+    def clean_nome_cadastro(self): # impossibilita espaços no campo
+        nome = self.cleaned_data.get('nome_cadastro') 
+
+        if nome:
+            nome = nome.strip()
+            if " " in nome:
+                raise forms.ValidationError('Não é permitido espaços no campo acima! ')
+            else:
+                return nome
