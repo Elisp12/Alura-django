@@ -1,1 +1,21 @@
-<h1>Login</h1>
+{% extends 'index.html' %}
+
+{% block content %}
+    <h2 class="titulo_cadastrar-login">Login</h2>
+    <section class="login-cadastrar">
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="formulario">
+                {% for field in form.visible_fields%}
+                    <div>
+                        <label class="label_form" for="{{ fild.id_for_label }}" >{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <div>
+                    <button class="botao" type="submit">Logar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock %}

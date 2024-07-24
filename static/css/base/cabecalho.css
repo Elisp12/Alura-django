@@ -18,17 +18,21 @@
     color: orangered;
     font-weight: 700;
     padding: 0.5em 0;
-
 }
 
 .lista_menu {
     display: none;
     position: absolute;
     top: 100%;
+    left: 0;
+}
+
+.titulo_menu {
+    text-align: center;
 }
 
 .lista_item {
-    width: 20vh;
+    width: 15vh;
     padding: 0.5em;
 }
 
@@ -41,7 +45,7 @@
     margin-bottom: 1em;
 }
 
-.container_botao:checked ~ .lista_menu {
+.container_botao:checked ~ .lista_menu{
     display:block;
     background-color: white;
 }
@@ -55,3 +59,17 @@
 .user_link {
     color:aquamarine;
 }
+
+/* Usuario */
+.lista_menu-usuario {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.container_botao:checked ~ .lista_menu-usuario{
+    display:block;
+    background-color: white;
+}
+

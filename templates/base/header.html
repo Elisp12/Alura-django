@@ -1,4 +1,6 @@
+
 <header class="cabecalho">
+    <!-- MENU NOVO-->
     <div class="container">
         <input type="checkbox" name="menu" id="menu" class="container_botao">
         <label for="menu" class="menu_container">
@@ -17,10 +19,27 @@
             </li>
         </ul>
     </div>
+    <!-- LOGO HEADER -->
     <div class="container_titulo">
         <h1 class="titulo"> <a href="{% url 'lista_peca' %}" class="titulo_header">CatBikes</a></h1>
     </div>
+    <!-- USUÁRIO -->
     <div class="container_user">
-        <a href="#" class="user_link"><i class="fa-solid fa-address-book"></i></a>
+        <input type="checkbox" name="usuario" id="usuario" class="container_botao">
+        <label for="usuario" class="menu_container">
+            <span class="icone_meu"><i class="fa-solid fa-address-book"></i></span>
+        </label>
+        <ul class="lista_menu-usuario">
+            <li class="titulo_menu">Usuário</li>
+            <li class="lista_item"> 
+                <a href="{%  url 'login' %}" class="item_link">Login</a> 
+            </li>
+            <li class="lista_item">
+                <a href="{% url 'cadastro' %}" class="item_link">Cadastrar</a>
+            </li>
+            <li class="lista_item">
+                <a href="{% url 'logout' %}" class="item_link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </li>
+        </ul>
     </div>
 </header>
