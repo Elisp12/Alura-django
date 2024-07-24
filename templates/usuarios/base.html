@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    {% load static %}
+{% include 'base/head.html' %}
+
+<body>
+    {% include 'usuarios/partials/header.html' %}
+
+    {% include 'partials/messages.html' %}
+
+    {% block content %} {% endblock %}
+    
+    {% include 'base/rodape.html' %}
+</body>
+</html>

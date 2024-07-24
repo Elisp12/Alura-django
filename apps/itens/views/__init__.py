@@ -1,1 +1,1 @@
-from .cadastrar_item import *
+from apps.itens.views.cadastrar_item import *
