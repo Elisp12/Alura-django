@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from usuarios.formulario.login import Login_formulario
+from apps.usuarios.formulario.login import Login_formulario
 from django.contrib import auth
 from django.contrib import messages
 
@@ -23,12 +23,12 @@ def login(request):
         if usuario is not None:
             auth.login(request, usuario)
 
-            messages.success(request, f'{nome} logado com sucesso')
+            messages.success(request, f'{nome} logado com sucesso!')
             
             return redirect('lista_peca')
         
         else:
-            messages.error(request, 'Erro ao efetuar login')
+            messages.error(request, 'Erro ao efetuar login!')
 
             return redirect('login')   
 

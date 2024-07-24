@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from catalogo.models import Peca
+from apps.catalogo.models import Peca
 
 def informacao_item(request, index):
     item = Peca.objects.filter(index = index).all()

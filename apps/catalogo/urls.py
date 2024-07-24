@@ -1,8 +1,8 @@
 from django.urls import path
 
-from .views.lista_peca import lista_peca
-from .views.informacao_item import informacao_item
-from .views.buscar_item import buscar_item
+from apps.catalogo.views.lista_peca import lista_peca
+from apps.catalogo.views.informacao_item import informacao_item
+from apps.catalogo.views.buscar_item import buscar_item
 
 urlpatterns = [
     path('', lista_peca, name='lista_peca'),

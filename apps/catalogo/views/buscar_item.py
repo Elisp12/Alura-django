@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from catalogo.models import Peca
+from apps.catalogo.models import Peca
 
 context = {
     
