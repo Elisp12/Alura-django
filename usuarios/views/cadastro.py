@@ -11,11 +11,6 @@ def cadastro(request):
         form = Cadastro_formulario(request.POST) # pega dados do input e passa para formulário
 
         if form.is_valid():
-            if form['senha1'].value() != form['senha2'].value(): #condição para senhas de diferentes
-                
-                messages.error(request, 'Senhas não são iguais!')
-                
-                return redirect('cadastro') #retorna a página de cadastro
 
             nome = form['nome_cadastro'].value() # valores passados por usuários
             email = form['email'].value()

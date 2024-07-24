@@ -28,6 +28,7 @@ class Cadastro_formulario(forms.Form):
     senha1 = forms.CharField(
         label='Senha',
         required=True,
+        min_length=6,
         max_length=70,
         widget=forms.PasswordInput(
             attrs= {
@@ -58,3 +59,13 @@ class Cadastro_formulario(forms.Form):
                 raise forms.ValidationError('Não é permitido espaços no campo acima! ')
             else:
                 return nome
+            
+    def clean_senha2(self): # validação de senha de cadastro
+        senha1 = self.cleaned_data.get('senha1') # pega dados senha 1
+        senha2 = self.cleaned_data.get('senha2') # pega dados senha 2
+
+        if senha1 and senha2: 
+            if senha1 != senha2: # se diferente 
+                raise forms.ValidationError("Senhas não são iguais!")
+            else: 
+                return senha2
