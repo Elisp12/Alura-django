@@ -1,0 +1,26 @@
+{% extends 'usuarios/base.html' %}
+
+{% block contente %}
+<h2 class="titulo_cadastrar-login">Editar Item</h2>
+    <section class="login-cadastrar">
+        <form action="{% url 'editar_item' index %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="formulario">
+                {% for field in form.visible_fields%}
+                    <div>
+                        <label class="label_form" for="{{ fild.id_for_label }}" >{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                     {% for error in field.errors %}
+                        <div class="messages">
+                            {{ error }}
+                        </div>
+                    {% endfor %} 
+                {% endfor %}
+                <div>
+                    <button class="botao" type="submit">Editar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock %}

@@ -8,6 +8,6 @@ from .views.deletar import deletar
 urlpatterns = [
     path('cadastrar/item/', cadastrar_item, name= 'cadastrar_item'),
     path('criar/modalidade/', criar_modalidade, name= 'criar_modalidade'),
-    path('editar/', editar, name= 'editar'),
-    path('deletar/', deletar, name= 'deletar'),
+    path('editar/item/<int:index>', editar, name= 'editar_item'),
+    path('deletar/item', deletar, name= 'deletar'),
 ]
