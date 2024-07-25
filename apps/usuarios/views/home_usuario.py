@@ -1,13 +1,12 @@
 from django.shortcuts import render, redirect
 
 from django.contrib import messages
-
+from django.contrib.auth.models import User
 
 from apps.catalogo.models import Peca
 
 
 def home_usuario(request):
-
     if not request.user.is_authenticated: # se usuario não estiver logado
         messages.error(request, "Usuário não logado!")
         return redirect('login') # redireciona para página de login
@@ -18,5 +17,6 @@ def home_usuario(request):
     context = {
         'lista_peca': lista_peca
     }
-
+    print(lista_peca)
     return render(request, 'usuarios/home_usuario.html', context= context)
+
