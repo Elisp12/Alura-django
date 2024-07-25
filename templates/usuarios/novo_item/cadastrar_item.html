@@ -11,6 +11,7 @@
                         <label class="label_form" for="{{ fild.id_for_label }}" >{{ field.label }}</label>
                         {{ field }}
                     </div>
+
                      {% for error in field.errors %}
                         <div class="messages">
                             {{ error }}
