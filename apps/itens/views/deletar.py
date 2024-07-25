@@ -1,4 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 
-def deletar(request):
-    return render(request, 'peca/informacao_item.html', context = {})
+from apps.catalogo.models import Peca
+from apps.itens.formulario import Item_formulario
+
+def deletar(request, index):
+    item = Peca.objects.get(index = index)
+    item.delete()
+
+    messages.success(request, 'Item deletado com sucesso!')
+    return render(request, 'usuarios/home_usuario.html', context = {})
