@@ -21,6 +21,10 @@
                     <li class="infor_lista-item"><a href="#" class="infor_emodalidade">{{ infor.usuario }}</a></li>
                 </ul>
             </div>
+            <div>
+                <a href="{% url 'editar' %}"><button>Editar</button></a>
+                <a href="{% url 'deletar' %}"><button>Deletar</button></a>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
