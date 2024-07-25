@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from apps.catalogo.models import Modadalidade, Peca
+from apps.catalogo.models import Peca
 from django.contrib import messages
 from django.contrib.auth.models import User
 

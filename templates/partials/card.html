@@ -17,7 +17,7 @@
                     <ul class="lista">
                         <li class="item_lista"><a href=" informacao/{{lista.index}}" class="lista_nome link_card">{{ lista.nome }}</a></li>
                         <li class="item_lista"><p class="lista_descricao">{{ lista.relacao }}</p></li>
-                        <li class="item_lista"><a href="#" class="lista_modalidade link_card">{{ lista.modalidade }}</a></li>
+                        <li class="item_lista"><a href="peca/da/modalidade/{{ lista.index }}" class="lista_modalidade link_card">{{ lista.modalidade.nome }}</a></li>
                     </ul>
                 </div>
             {% endfor %}
