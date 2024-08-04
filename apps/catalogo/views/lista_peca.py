@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from apps.catalogo.models import Modadalidade, Peca
+from apps.catalogo.models import Modalidade, Peca
 
 from django.contrib.auth.models import User
 
