@@ -6,21 +6,44 @@
         <form action="{% url 'cadastrar_item' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="formulario">
-                {% for field in form.visible_fields%}
-                    <div>
-                        <label class="label_form" for="{{ fild.id_for_label }}" >{{ field.label }}</label>
-                        {{ field }}
+                    <div class="label_form">
+                        <label for="nome" class="label_form"> nome
+                            <input type="text" name="nome" id="nome" class="form-control">
+                        </label>
+                        <label for="descricao" class="label_form"> descricao
+                            <input type="text" name="descricao" id="descricao" class="form-control">
+                        </label>
+                        <label for="relacao"> Relação
+                            <select name="relacao" id="relacao" class="label-form">
+                                <option value="0">Selecione</option>
+                                {% for re in lista_item %}
+                                    <option value="{{ re.relacao }}">{{ re.relacao }}</option>
+                                {% endfor %}
+                            </select>
+                        </label>
+                        <label for="imagem" class="label-form">
+                            <input type="file" name="imagem" id="imagem" class="form-control">
+                        </label>
+                        <label for="modalidade"> Modalidade
+                            <select name="modalidade" id="modalidade" class="label-form">
+                                <option value="0">Selecione</option>
+                                {% for mod in lista_modalidade %}
+                                    <option value="{{ mod.index }}">{{ mod.nome }}</option>
+                                {% endfor %}
+                            </select>
+                        </label>
                     </div>
-                     {% for error in field.errors %}
-                        <div class="messages">
-                            {{ error }}
-                        </div>
-                    {% endfor %} 
+                
+                {% for error in field.errors %}
+                    <div class="messages">
+                        {{ error }}
+                    </div> 
                 {% endfor %}
-                <div>
-                    <button class="botao" type="submit">Cadastrar</button>
+
+                    <label for="botao" class="botao">
+                        <input type="submit" class="botao" value="Cadastrar">
+                    </label>
                 </div>
-            </div>
         </form>
     </section>
 {% endblock %}
